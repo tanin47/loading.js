@@ -62,16 +62,21 @@
 						$(this.placeholder).append(previous_children[i]);
 					}
 
-					$(this).html('<span style="display:inline-block;width:100%;height:100%;" onclick="if (event.stopPropagation) event.stopPropagation();event.cancelBubble = true;return false;">'+options.image + ' ' + options.word+'</span>');
+					if (this.loading_holder == undefined) {
+						this.loading_holder = $('<span style="display:inline-block;width:100%;height:100%;" onclick="if (event.stopPropagation) event.stopPropagation();event.cancelBubble = true;return false;">'+options.image + ' ' + options.word+'</span>');
+						$(this).append(this.loading_holder);
+					}
+
+					$(this.loading_holder).css('display', 'inline-block');
 				}
 				else
 				{
 					if (this.loading !== true) return;
 					this.loading = false;
+					$(this.loading_holder).css('display', 'none');
 
 					if (this.placeholder == undefined) return;
 
-					$(this).html('');
 					var previous_children = $(this.placeholder).contents();
 					for (var i=0;i<previous_children.length;i++) {
 						$(this).append(previous_children[i]);
