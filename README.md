@@ -37,4 +37,10 @@ Tanin Na Nakorn
 Boring Legal stuff
 --------------------
 
-It's under Tanin license, which means you can do whatever you want with it, and I cannot sue you.
+
+License
+---------
+
+Do What The Fuck You Want To Public License (http://sam.zoy.org/wtfpl/)
+
+0. You just DO WHAT THE FUCK YOU WANT TO.
